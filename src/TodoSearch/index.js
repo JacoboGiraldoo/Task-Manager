@@ -2,6 +2,7 @@ import React from "react";
 import { TodoContext } from "../TodoContext";
 import "./TodoSearch.css"
 
+
  
 function TodoSearch() {
     const { searchValue, setSearchValue } = React.useContext(TodoContext);
@@ -12,14 +13,16 @@ function TodoSearch() {
   
     return (
       
+      <div>
+
       <input
       className="TodoSearch-input"
-      placeholder="Cebolla"
+      placeholder="Buscar"  
       value={searchValue}
       onChange={onSearchValueChange}
       />
       
-
+      </div>
       
     );
   }

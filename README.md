@@ -1,4 +1,4 @@
-# TaskMachine
+# TaskManager
 
 A simple and responsive task management application built with React.
 

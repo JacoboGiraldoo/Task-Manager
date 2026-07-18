@@ -1,72 +1,85 @@
 *{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-html {
-    font-size: 62.5%;
+html{
+  font-size: 62.5%;
 }
 form {
-    background-color: #f4efe5;
-    height: 35vh;
-    width: 30vw;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem;
-} 
+  background-color: #f4efe5;
+  width: min(600px, 90%);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.4rem;
+  gap: 1.2rem;
+}
 label {
-    color: #000;
-    text-align: center;
-    font-weight: bold;
-    
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8rem;
 }
 textarea {
-    resize: vertical;
-    background-color: #F9FBFC;
-    border: 2px solid #000;
-    font-size: 2rem;
-    text-align: center;
-    padding: 1.2rem;
-    height: 12rem;
-    width: 60%;
-    margin-top: 5rem;
-    border-radius: 5px;
-    border: 2px solid grey;
-    
+  resize: vertical;
+  background-color: #F9FBFC;
+  border: 2px solid grey;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1.2rem;
+  height: 100px;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 1.6rem;
+  border-radius: 5px;
 }
 textarea::placeholder {
-    color: #a5a5a5;
-    font-family: 'Quicksand', sans-serif ;
-    font-weight: 400;
+  color: #a5a5a5;
+  font-family: 'Quicksand', sans-serif ;
+  font-weight: 400;
 }
 textarea:focus {
-    outline-color: #61DAFA;
-  }
+  outline-color: #61DAFA;
+}
+
+.TodoForm-buttonContainer{
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1.6rem;
+  flex-wrap: wrap;
+}
 
 button {
-    height: 6rem;
-    width: 10rem;
-    cursor: pointer;
-    background-color: #f4efe5;
-    border-style: none;
-    margin-top: 10rem;
-    font-weight: bold;
-    border-radius: 10px;
+  padding: 1rem 1.6rem;
+  cursor: pointer;
+  background-color: #f4efe5;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0px 1px 3px #000;
+  min-width: 8rem;
+  font-size: 1.6rem;
 }
 .add-button{
-    margin-left: 22.5rem;
-    box-shadow: 0px 1px 3px #000;
+  background-color: transparent;
 }
-
-.cancel-button{
-    box-shadow: 0px 1px 3px #000;
-}
-
 .add-button:hover{
-    background-color: #29c7ab;
+  background-color: #29c7ab;
+  color: #fff;
 }
 .cancel-button:hover{
-    background-color: #fe0054;
+  background-color: #fe0054;
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  html{ font-size: 56.25%; }
+  form { padding: 1.6rem; }
+  textarea { font-size: 1.4rem; height: 90px; }
+  .TodoForm-buttonContainer { flex-direction: column; align-items: center; }
+  button { width: 100%; max-width: 320px; min-width: 0; font-size: 1.6rem; padding: 1rem; }
 }

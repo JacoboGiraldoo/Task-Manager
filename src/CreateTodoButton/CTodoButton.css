@@ -1,9 +1,9 @@
 .TodoButton {
-    background-color: #61DAFA;
+  background-color: #61DAFA;
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 50px;
+  font-size: clamp(20px, 4vw, 28px);
   position: fixed;
   bottom: 24px;
   right: 24px;
@@ -12,12 +12,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 64px;
-  width: 64px;
+  height: clamp(48px, 8vw, 64px);
+  width: clamp(48px, 8vw, 64px);
   transform: rotate(0);
   transition: .3s ease;
-}
-.TodoButton{
-  position: fixed;
   z-index: 2;
+}
+
+@media (max-width: 480px) {
+  .TodoButton {
+    bottom: 16px;
+    right: 16px;
+    height: 56px;
+    width: 56px;
+    font-size: 22px;
+  }
 }
